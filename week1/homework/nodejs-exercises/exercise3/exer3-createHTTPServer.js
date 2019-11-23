@@ -30,7 +30,8 @@ let server = http.createServer((req, res) => {
     .appendChild(document.createTextNode('Welcome to Server-land!'));`);
   } else {
     res.setHeader('Content-Type', 'text/plain');
-    // res.writeHead(200, {'Content-Type' : 'text/plain'});
+    res.statusCode = 404;
+    // res.writeHead(404, {'Content-Type' : 'text/plain'});
     res.write('Page Not Found');
   }
   res.end(); //end the response

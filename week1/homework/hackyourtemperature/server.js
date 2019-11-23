@@ -1,6 +1,8 @@
 'use strict';
 
 const express = require('express');
+const axios = require('axios');
+const expressHandlebars = require('express-handlebars');
 
 // init express
 const app = express();
